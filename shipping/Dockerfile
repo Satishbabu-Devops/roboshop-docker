@@ -5,5 +5,6 @@ COPY pom.xml .
 COPY src ./src
 RUN mvn clean package
 RUN mv target/shipping-1.0.jar shipping.jar
+EXPOSE 8080
 # ExecStart=/bin/java -jar /app/shipping.jar
 CMD ["java", "shipping.jar"]
